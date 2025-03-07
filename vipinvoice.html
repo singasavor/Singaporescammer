@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Subscription - Payment</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body, html {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto; /* Allows scrolling for longer content */
+}
+
+.invoice-container {
+    width: 95%;
+    max-width: 800px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    border: 2px solid rgba(255, 0, 0, 0.8);
+    min-height: 100vh; /* Ensures full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Headers */
+h1 {
+    font-size: 26px;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #ffea00;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    text-transform: uppercase;
+}
+
+td {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Highlight Total Amount */
+.highlight {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+/* Payment Details */
+.payment-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    text-align: left;
+}
+
+.payment-details h3 {
+    text-align: center;
+    color: #ffea00;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.payment-details p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Left-Aligned Text */
+.align-left {
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* QR Code Image */
+.paynow-img {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Button Container */
+.btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Back Button */
+.btn-back {
+    background-color: #555;
+    color: white;
+}
+
+.btn-back:hover {
+    background-color: #777;
+    transform: scale(1.05);
+}
+
+/* Contact Button */
+.btn-contact {
+    background-color: #ffea00;
+    color: #000;
+}
+
+.btn-contact:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .invoice-container {
+        width: 100%;
+        padding: 20px;
+        min-height: 100vh;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="invoice-container">
+    <h1>VIP Subscription Invoice</h1>
+    <h2>Subscription Details</h2>
+
+    <table>
+        <tr><th>Description</th><th>Details</th></tr>
+        <tr><td><strong>Alias Name</strong></td><td id="aliasName">Loading...</td></tr>
+        <tr><td><strong>Telegram Username</strong></td><td id="telegramUsername">Loading...</td></tr>
+        <tr><td><strong>Email Address</strong></td><td id="email">Loading...</td></tr>
+        <tr><td><strong>Type of Business</strong></td><td id="businessType">Loading...</td></tr>
+        <tr><td><strong>Subscription Plan</strong></td><td id="plan">Loading...</td></tr>
+        <tr><td><strong>Total Amount</strong></td><td class="highlight">$<span id="totalPrice">0.00</span></td></tr>
+    </table>
+
+    <!-- Payment Instructions -->
+    <div class="payment-details">
+        <h3>Payment Instructions</h3>
+        <p>Scan or Screenshot the PayNow QR Code</p>
+        <img src="https://s.tfrbot.com/h/faIeip" alt="PayNow QR Code" class="paynow-img">
+
+        <p><strong>PayNow VPA:</strong> <span class="highlight">+6580170839#GRAB</span></p>
+        
+        <p class="align-left">1️⃣ Copy & paste the VPA above.</p>
+        <p class="align-left">2️⃣ Enter the total amount for Payment.</p>
+        <p class="align-left">3️⃣ Once completed, take a screenshot and notify us.</p>
+
+        <h3>Bank Transfer</h3>
+        <p class="align-left"><strong>Payee Name:</strong> <span class="highlight">SingaporeScammer</span></p>
+        <p class="align-left"><strong>Bank:</strong> <span class="highlight">DBS BANK</span></p>
+        <p class="align-left"><strong>Account Number:</strong> <span class="highlight">88532600022120361</span></p>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn btn-back" onclick="goBack()">Go Back</a>
+        <a class="btn btn-contact" href="https://wa.me/+6580581196">Contact Us</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        document.getElementById("aliasName").textContent = urlParams.get("aliasName") || "Not provided";
+        document.getElementById("telegramUsername").textContent = urlParams.get("telegramUsername") || "Not provided";
+        document.getElementById("email").textContent = urlParams.get("email") || "Not provided";
+        document.getElementById("businessType").textContent = urlParams.get("businessType") || "Not provided";
+        document.getElementById("plan").textContent = urlParams.get("plan") || "Not provided";
+        document.getElementById("totalPrice").textContent = urlParams.get("price") || "0.00";
+    });
+
+    function goBack() {
+        history.back();
+    }
+</script>
+
+</body>
+</html>
