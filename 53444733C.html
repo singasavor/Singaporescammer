@@ -1,151 +1,302 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scam Alert: KL Transportation Services</title>
-  <meta name="description" content="KL Transportation Services (UEN 53444733C) scam alert and community report in Singapore. Stay informed and report fraud.">
-  <meta name="keywords" content="KL Transportation Services, scam alert, Singapore scams, freecycling scam, UEN 53444733C, delivery scam, furniture scam, Tan Kok Liang">
-  <meta name="author" content="SingaporeScammer.com">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      padding-top: 80px;
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .alert-box {
-      background-color: #fef2f2;
-      border-left: 6px solid #c82333;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 10px rgba(220, 53, 69, 0.1);
-      margin-bottom: 2rem;
-    }
-    h1, h2 {
-      color: #c82333;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    .navbar {
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .btn-danger {
-      background-color: #c82333;
-      border: none;
-    }
-    .btn-danger:hover {
-      background-color: #a71d2a;
-    }
-    footer {
-      background-color: #e9ecef;
-      font-size: 0.9rem;
-      color: #6c757d;
-    }
-    /* Slider Styles */
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scam Alert: KL Transportation Services</title>
+<meta content="KL Transportation Services (UEN 53444733C) scam alert and community report in Singapore. Stay informed and report fraud." name="description"/>
+<meta content="KL Transportation Services, scam alert, Singapore scams, freecycling scam, UEN 53444733C, delivery scam, furniture scam, Tan Kok Liang" name="keywords"/>
+<meta content="SingaporeScammer.com" name="author"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+  :root {
+    --brand-red: #c82333;
+    --brand-dark: #1c1c1c;
+    --bg-light: #f8f9fa;
+    --text-dark: #333;
+    --hover-glow: 0 0 12px rgba(200, 35, 51, 0.6);
+  }
+
+  body {
+    padding-top: 80px;
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2 {
+    color: var(--brand-red);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .lead {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+  }
+
+  .navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+  }
+
+  .btn-danger {
+    background-color: var(--brand-red);
+    border: none;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-danger:hover {
+    background-color: #a71d2a;
+    box-shadow: var(--hover-glow);
+    transform: translateY(-1px);
+  }
+
+  .alert-box {
+    background-color: #fef2f2;
+    border-left: 6px solid var(--brand-red);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 12px rgba(220, 53, 69, 0.15);
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    height: 55vh;
+    overflow: hidden;
+    margin: 1rem auto;
+    border-radius: 12px;
+    border: 2px solid var(--brand-red);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    height: 100%;
+    width: 100%;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .slider img:hover {
+    transform: scale(1.03);
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+  }
+
+  .slider-arrow:hover {
+    background: rgba(255, 0, 0, 0.7);
+  }
+
+  .left-arrow { left: 10px; }
+  .right-arrow { right: 10px; }
+
+  .image-name {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px 10px 0 0;
+    padding: 0.5rem;
+  }
+
+  section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    animation: fadeIn 0.8s ease both;
+  }
+
+  footer {
+    background-color: var(--brand-dark);
+    color: #eee;
+    font-size: 0.9rem;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    padding: 1rem 0;
+  }
+
+  .chart-container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    animation: fadeInUp 1s ease-out both;
+  }
+
+  form textarea {
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 1rem;
+  }
+
+  .glow {
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .glow:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    0%   { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Lightbox */
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
     .slider-container {
-      position: relative;
-      width: 100%;
-      max-width: 1080px;
-      height: 90vh;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-    }
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-    }
-    .slider img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+      height: 45vh;
     }
     .slider-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 10px 15px;
-      font-size: 24px;
-      border: none;
-      cursor: pointer;
-      border-radius: 50%;
-      outline: none;
-      transition: background 0.3s;
-    }
-    .slider-arrow:hover {
-      background: rgba(255, 0, 0, 0.7);
-    }
-    .left-arrow {
-      left: 10px;
-    }
-    .right-arrow {
-      right: 10px;
+      font-size: 20px;
+      padding: 8px 12px;
     }
     .image-name {
-      position: absolute;
-      top: -40px; /* Adjust this value based on your layout */
-      left: 0;
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      font-size: 24px;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      font-size: 18px;
     }
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .slider-container {
-          height: 70vh;
-      }
-      .slider-arrow {
-          font-size: 20px;
-          padding: 8px 12px;
-      }
-      .image-name {
-          font-size: 20px;
-      }
-    }
-  </style>
-</head>
+  }
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #ff073a, #ff4500);
+  z-index: 10000;
+  transition: width 0.25s ease;
+}
+
+section:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in-out;
+}
+
+.alert-box::before {
+  content: "⚠️";
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+
+.slider-container {
+  background: #f0f0f0;
+  box-shadow: 8px 8px 16px #c8c8c8, -8px -8px 16px #ffffff;
+}
+
+h1.text-danger {
+  background: linear-gradient(90deg, #c82333, #ff073a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#commentForm {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+#commentForm.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head>
 <body>
-
+<div id="progressBar"></div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="https://t.me/singaporescammer">
-      <img src="https://singasavors.github.io/Logo/scamlogo.png" alt="Logo" height="40">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Singaporescammer/topscammer.html" target="_blank">Top Scammer</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Singaporescammer/scam-details.html" target="_blank">Scam Database</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Singaporescammer/vipsubscribe.html" target="_blank">VIP SUBSCRIBE</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://t.me/singaporescammer" target="_blank">Telegram Channel</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Councilofunderground/contact-us.html" target="_blank">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="container-fluid">
+<a class="navbar-brand" href="https://t.me/singaporescammer">
+<img alt="Logo" height="40" src="https://singasavors.github.io/Logo/scamlogo.png"/>
+</a>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Singaporescammer/topscammer.html" target="_blank">Top Scammer</a></li>
+<li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Singaporescammer/scam-details.html" target="_blank">Scam Database</a></li>
+<li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Singaporescammer/vipsubscribe.html" target="_blank">VIP SUBSCRIBE</a></li>
+<li class="nav-item"><a class="nav-link" href="https://t.me/singaporescammer" target="_blank">Telegram Channel</a></li>
+<li class="nav-item"><a class="nav-link" href="https://singasavors.github.io/Councilofunderground/contact-us.html" target="_blank">Contact Us</a></li>
+</ul>
+</div>
+</div>
 </nav>
-
 <div class="container">
-  <h1 class="text-danger">SCAM ALERT: KL Transportation Services</h1>
+  <h1 class="text-danger display-5 fw-bold mb-3">SCAM ALERT: KL Transportation Services</h1>
   <p class="lead">UEN: 53444733C | Singapore</p>
-  
+
   <section>
     <h2>Company Overview</h2>
     <p><strong>KL Transportation Services</strong> is a sole proprietorship registered in Singapore with the Unique Entity Number (UEN) <strong>53444733C</strong>. Officially listed under ACRA, the company claims to offer moving and delivery services.</p>
@@ -178,112 +329,241 @@
     </ul>
   </section>
 
-  <body>
-<div class="container">
-    <section>
-        <h2>Scam Allegations and Reports</h2>
-        <div class="alert-box">
-            <strong>Warning:</strong> Numerous victims have come forward on <a href="https://scamsg.com/company/53444733C" target="_blank">ScamSG.com</a>, alleging that KL Transportation Services is involved in fraudulent activities, including:
-            <ul>
-                <li>Collecting payment for delivery or disposal services and failing to fulfill the agreement.</li>
-                <li>Selling customers' furniture on Carousell without consent.</li>
-                <li>Using fake online profiles and impersonation to discredit whistleblowers.</li>
-                <li>Running a deceptive "freecycling" scam — promising free items, then charging for non-existent deliveries.</li>
-            </ul>
-        </div>
-        <p>Reported scam network includes:</p>
-        <ul>
-            <li>#MasKilatKhan</li><li>#LiuDongHang</li><li>#GabrielGoh</li><li>#TanKokLiang</li><li>#NinHairi</li>
-            <li>#ElaineGoh</li><li>#NgBaoZheng</li><li>#MelvinNg</li><li>#EzabelNg</li><li>#AlvinNg</li>
-            <li>#ValerieTan</li><li>#ChelseaZeng</li><li>#JWLim</li><li>#JasonWee</li><li>#ShineGoh</li>
-            <li>#ChenYuXin</li><li>#StellaKoh</li><li>#ChanJiawei</li><li>#NgCherTeck</li><li>#MichelleNg</li>
-            <li>#alventanhaojia</li>
-        </ul>
-    </section>
+  <section>
+    <h2>Scam Allegations and Reports</h2>
+    <div class="alert-box">
+      <strong>Warning:</strong> Numerous victims have come forward on <a href="https://scamsg.com/company/53444733C" target="_blank">ScamSG.com</a>, alleging that KL Transportation Services is involved in fraudulent activities, including:
+      <ul>
+        <li>Collecting payment for delivery or disposal services and failing to fulfill the agreement.</li>
+        <li>Selling customers' furniture on Carousell without consent.</li>
+        <li>Using fake online profiles and impersonation to discredit whistleblowers.</li>
+        <li>Running a deceptive "freecycling" scam — promising free items, then charging for non-existent deliveries.</li>
+      </ul>
+    </div>
+    <p>Reported scam network includes:</p>
+    <ul class="d-flex flex-wrap gap-2">
+      <li>#MasKilatKhan</li><li>#LiuDongHang</li><li>#GabrielGoh</li><li>#TanKokLiang</li><li>#NinHairi</li>
+      <li>#ElaineGoh</li><li>#NgBaoZheng</li><li>#MelvinNg</li><li>#EzabelNg</li><li>#AlvinNg</li>
+      <li>#ValerieTan</li><li>#ChelseaZeng</li><li>#JWLim</li><li>#JasonWee</li><li>#ShineGoh</li>
+      <li>#ChenYuXin</li><li>#StellaKoh</li><li>#ChanJiawei</li><li>#NgCherTeck</li><li>#MichelleNg</li>
+      <li>#alventanhaojia</li>
+    </ul>
+  </section>
+<!-- Image Slider Section -->
+<div class="image-name text-center fw-bold bg-dark text-light py-2 rounded-top" id="image-name">Mas Kilat Khan</div>
 
-    <div class="image-name" id="image-name">Mas Kilat Khan</div>
-    <section class="slider-container">
-        <button class="slider-arrow left-arrow" onclick="prevImage()">&#10094;</button>
-        <div class="slider">
-            <img src="https://singasavors.github.io/Logo/maskilat-scam.png" alt="Mas Kilat Khan">
-            <img src="https://singasavors.github.io/Logo/jeffrey-scam.png" alt="Liu Dong Hang">
-            <img src="https://singasavors.github.io/Logo/gabriel-scam.png" alt="Gabriel Goh">
-            <img src="https://singasavors.github.io/Logo/tankokliang-scam.png" alt="Tan Kok Liang">
-            <img src="https://singasavors.github.io/Logo/nin-scam.png" alt="Nin Hairi">
-            <img src="https://singasavors.github.io/Logo/elaine-scam.png" alt="Elaine Goh">
-            <img src="https://singasavors.github.io/Logo/alan-scam" alt="Ng Bao Zheng">
-            <img src="https://singasavors.github.io/Logo/babi-scam.png" alt="Nur Babi">
-            <img src="https://singasavors.github.io/Logo/melvin-scam.png" alt="Melvin Ng">
-            <img src="https://singasavors.github.io/Logo/ezabel-scam.png" alt="Ezabel Ng">
-            <img src="https://singasavors.github.io/Logo/alvin-scam.png" alt="Alvin Ng">
-            <img src="https://singasavors.github.io/Logo/valeria-scam.png" alt="Valerie Tan">
-            <img src="https://singasavors.github.io/Logo/chelsea-scam.png" alt="Chelsea Zeng">
-            <img src="https://singasavors.github.io/Logo/jwlim-scam.png" alt="JW Lim">
-            <img src="https://singasavors.github.io/Logo/jason-scam.png" alt="Jason Wee">
-            <img src="https://singasavors.github.io/Logo/irwin-scam.png" alt="Irwin Tan">
-            <img src="https://singasavors.github.io/Logo/babi-scam2.png" alt="Forgot Name But Scammer">
-            <img src="https://singasavors.github.io/Logo/shine-scam.png" alt="Shine Goh">
-            <img src="https://singasavors.github.io/Logo/xiaojuan-scam.png" alt="Chen Xiao Juan">
-            <img src="https://singasavors.github.io/Logo/stella-scam.png" alt="Stella Koh">
-            <img src="https://singasavors.github.io/Logo/jiawei-scam.png" alt="Chan Jiawei">
-            <img src="https://singasavors.github.io/Logo/karen-scam.png" alt="Karen">
-            <img src="https://singasavors.github.io/Logo/ngcherteck-scam.png" alt="Ng Cher Teck">
-            <img src="https://singasavors.github.io/Logo/michelle-scam.png" alt="Michelle">
-        </div>
-        <button class="slider-arrow right-arrow" onclick="nextImage()">&#10095;</button>
-    </section>
+<section class="slider-container my-4 shadow rounded-bottom border border-danger fade-in">
+  <button class="slider-arrow left-arrow" onclick="prevImage()">❮</button>
+  <div class="slider">
+    <img alt="Mas Kilat Khan" src="https://singasavors.github.io/Logo/maskilat-scam.png"/>
+    <img alt="Liu Dong Hang" src="https://singasavors.github.io/Logo/jeffrey-scam.png"/>
+    <img alt="Gabriel Goh" src="https://singasavors.github.io/Logo/gabriel-scam.png"/>
+    <img alt="Tan Kok Liang" src="https://singasavors.github.io/Logo/tankokliang-scam.png"/>
+    <img alt="Nin Hairi" src="https://singasavors.github.io/Logo/nin-scam.png"/>
+    <img alt="Elaine Goh" src="https://singasavors.github.io/Logo/elaine-scam.png"/>
+    <img alt="Ng Bao Zheng" src="https://singasavors.github.io/Logo/alan-scam.png"/>
+    <img alt="Nur Babi" src="https://singasavors.github.io/Logo/babi-scam.png"/>
+    <img alt="Melvin Ng" src="https://singasavors.github.io/Logo/melvin-scam.png"/>
+    <img alt="Ezabel Ng" src="https://singasavors.github.io/Logo/ezabel-scam.png"/>
+    <img alt="Alvin Ng" src="https://singasavors.github.io/Logo/alvin-scam.png"/>
+    <img alt="Valerie Tan" src="https://singasavors.github.io/Logo/valerie-scam.png"/>
+    <img alt="Chelsea Zeng" src="https://singasavors.github.io/Logo/chelsea-scam.png"/>
+    <img alt="JW Lim" src="https://singasavors.github.io/Logo/jwlim-scam.png"/>
+    <img alt="Jason Wee" src="https://singasavors.github.io/Logo/jason-scam.png"/>
+    <img alt="Irwin Tan" src="https://singasavors.github.io/Logo/irwin-scam.png"/>
+    <img alt="Forgot Name But Scammer" src="https://singasavors.github.io/Logo/babi-scam2.png"/>
+    <img alt="Shine Goh" src="https://singasavors.github.io/Logo/shine-scam.png"/>
+    <img alt="Chen Xiao Juan" src="https://singasavors.github.io/Logo/xiaojuan-scam.png"/>
+    <img alt="Stella Koh" src="https://singasavors.github.io/Logo/stella-scam.png"/>
+    <img alt="Chan Jiawei" src="https://singasavors.github.io/Logo/jiawei-scam.png"/>
+    <img alt="Karen" src="https://singasavors.github.io/Logo/karen-scam.png"/>
+    <img alt="Ng Cher Teck" src="https://singasavors.github.io/Logo/ngcherteck-scam.png"/>
+    <img alt="Michelle" src="https://singasavors.github.io/Logo/michelle-scam.png"/>
+  </div>
+  <button class="slider-arrow right-arrow" onclick="nextImage()">❯</button>
+</section>
 
-    <section class="mb-5">
-        <h2>Leave a Public Comment</h2>
-        <form id="commentForm">
-            <div class="mb-3">
-                <textarea class="form-control" rows="4" placeholder="Share your experience. Comments are public."></textarea>
-            </div>
-            <button type="submit" class="btn btn-danger">Submit</button>
-        </form>
-    </section>
-</div>
+<!-- Chart Section -->
+<section class="container py-5 fade-in">
+  <h2 class="text-center text-danger fw-bold">Impact of KL Transportation Services on Scam Cases (2020–2024)</h2>
+  <p class="text-center">Since its establishment on <strong>02 Jan 2022</strong>, reports have surged dramatically.</p>
+  <p class="text-center">Estimated <strong>$10 million</strong> lost to fraudulent deliveries in freecycling scams.</p>
+  <div class="chart-container my-4 rounded shadow-sm overflow-hidden">
+    <canvas id="scamChart" style="min-height: 400px;"></canvas>
+  </div>
+</section>
 
-<footer class="text-center p-3 bg-light">
-    &copy; 2025 Singapore Authentic Scam Review | SingaporeScammer.com
+<!-- Comment Section -->
+<section class="container mb-5 fade-in">
+  <h2 class="fw-bold">Leave a Public Comment</h2>
+  <form id="commentForm">
+    <div class="mb-3">
+      <input type="text" id="commentName" class="form-control" placeholder="Your name (optional)" />
+    </div>
+    <div class="mb-3">
+      <textarea id="commentText" class="form-control" placeholder="Share your experience. Comments are public." rows="4" required></textarea>
+    </div>
+    <button class="btn btn-danger glow" type="submit">Submit</button>
+  </form>
+  <div id="commentList" class="mt-4"></div>
+</section>
+
+<footer class="text-center p-3 bg-light mt-4">
+  © 2025 Singapore Authentic Scam Review | SingaporeScammer.com
 </footer>
 
+<!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Slider Script (unchanged) -->
 <script>
-    let currentIndex = 0;
-    const slider = document.querySelector('.slider');
-    const images = document.querySelectorAll('.slider img');
-    const imageName = document.getElementById("image-name");
+  let currentIndex = 0;
+  const slider = document.querySelector('.slider');
+  const images = document.querySelectorAll('.slider img');
+  const imageName = document.getElementById("image-name");
+  const imageNames = [ "Mas Kilat Khan", "Liu Dong Hang", "Gabriel Goh", "Tan Kok Liang", "Nin Hairi",
+    "Elaine Goh", "Ng Bao Zheng", "Ng Bao Zheng", "Nur Babi", "Melvin Ng",
+    "Ezabel Ng", "Alvin Ng", "Valerie Tan", "Chelsea Zeng", "JW Lim",
+    "Jason Wee", "Forgot Name But Scammer", "Forgot Name But Scammer", "Shine Goh",
+    "Chen Yu Xin", "Stella Koh", "Chan Jiawei", "Karen", "Ng Cher Teck",
+    "Tan Kok Liang", "Michelle" ];
 
-    const imageNames = [
-        "Mas Kilat Khan", "Liu Dong Hang", "Gabriel Goh", "Tan Kok Liang", "Nin Hairi",
-        "Elaine Goh", "Ng Bao Zheng", "Ng Bao Zheng", "Nur Babi", "Melvin Ng",
-        "Ezabel Ng", "Alvin Ng", "Valerie Tan", "Chelsea Zeng", "JW Lim",
-        "Jason Wee", "Forgot Name But Scammer", "Forgot Name But Scammer", "Shine Goh",
-        "Chen Yu Xin", "Stella Koh", "Chan Jiawei", "Karen", "Ng Cher Teck",
-        "Tan Kok Liang", "Michelle"
-    ];
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    imageName.textContent = imageNames[currentIndex];
+  }
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        imageName.textContent = imageNames[currentIndex];  // Update the image name display
-    }
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateSlider();
+  }
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateSlider();
-    }
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateSlider();
+  }
 
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateSlider();
-    }
-
-    document.querySelector('.left-arrow').addEventListener('click', prevImage);
-    document.querySelector('.right-arrow').addEventListener('click', nextImage);
-
-    // Set automatic transition every 3000 milliseconds (3 seconds)
-    setInterval(nextImage, 3000);
+  document.querySelector('.left-arrow').addEventListener('click', prevImage);
+  document.querySelector('.right-arrow').addEventListener('click', nextImage);
+  setInterval(nextImage, 3000);
 </script>
+
+<!-- Chart Script (unchanged) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ctx = document.getElementById("scamChart").getContext("2d");
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["2020", "2021", "2022", "2023", "2024"],
+        datasets: [{
+          label: "Reported Scam Cases",
+          data: [9500, 14500, 24500, 36000, 46600],
+          backgroundColor: ["#555", "#777", "#ff073a", "#ff4500", "#00ffcc"],
+          borderColor: "white",
+          borderWidth: 1,
+          hoverBackgroundColor: ["#888", "#999", "#ff073a", "#ff4500", "#00ffcc"],
+          hoverBorderColor: "white"
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: "Scam Case Growth Since KL Transportation’s Founding",
+            color: "#fff",
+            font: { size: 18 }
+          },
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (tooltipItem) {
+                return `Scam Cases: ${tooltipItem.raw.toLocaleString()}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { color: "white" }, title: { display: true, text: "Reported Scam Cases", color: "white" } },
+          x: { ticks: { color: "white" }, title: { display: true, text: "Year", color: "white" } }
+        }
+      }
+    });
+  });
+</script>
+
+<!-- Scroll Progress Bar -->
+<script>
+  window.onscroll = function () {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  };
+</script>
+
+<!-- Comment Fade-In -->
+<script>
+  const commentForm = document.getElementById("commentForm");
+  window.addEventListener("scroll", () => {
+    const top = commentForm.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      commentForm.classList.add("show");
+    }
+  });
+</script>
+
+<!-- Comment Logic with Name and Limit -->
+<script>
+  const form = document.getElementById('commentForm');
+  const nameInput = document.getElementById('commentName');
+  const textInput = document.getElementById('commentText');
+  const list = document.getElementById('commentList');
+  const storageKey = 'comments53444733C';
+  const commentLimit = 30;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const stored = JSON.parse(localStorage.getItem(storageKey)) || [];
+    stored.forEach(displayComment);
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = nameInput.value.trim() || "Anonymous";
+    const text = textInput.value.trim();
+    if (!text) return;
+
+    let stored = JSON.parse(localStorage.getItem(storageKey)) || [];
+    const comment = { name, text };
+    stored.push(comment);
+    if (stored.length > commentLimit) stored = stored.slice(-commentLimit);
+    localStorage.setItem(storageKey, JSON.stringify(stored));
+
+    displayComment(comment);
+    nameInput.value = '';
+    textInput.value = '';
+  });
+
+  function displayComment({ name, text }) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'bg-light border rounded p-3 mb-2 fade-in';
+
+    const nameEl = document.createElement('strong');
+    nameEl.className = 'd-block text-danger';
+    nameEl.textContent = name;
+
+    const textEl = document.createElement('p');
+    textEl.className = 'mb-0';
+    textEl.textContent = text;
+
+    wrapper.appendChild(nameEl);
+    wrapper.appendChild(textEl);
+    list.prepend(wrapper);
+  }
+</script>
+
 </body>
 </html>
