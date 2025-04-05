@@ -26,162 +26,168 @@
     }
     </script>
     
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+   <style>
+  /* General Reset & Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-        html, body {
-            height: 100%;
-            width: 100%;
-            background-color: #f8f8f8;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+  html, body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #f0f4f8, #dbe4ed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+  }
 
-        /* Header */
-        header {
-            background-color: red;
-            color: white;
-            padding: 15px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            width: 100%;
-        }
+  /* Header */
+  header {
+    background: linear-gradient(to right, #ff4e50, #f00000);
+    color: #fff;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
+  }
 
-        /* Name Tag */
-        .image-name {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin: 10px 0;
-        }
+  /* Name Display */
+  .image-name {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: #333;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
 
-        /* Slider Container */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            max-width: 1080px;
-            height: 90vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
-        }
+  /* Slider Container */
+  .slider-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background: none;
+    border-radius: 0;
+  }
 
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
+  .slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    height: 100%;
+  }
 
-        .slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+  .slider img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+  }
 
-        /* Navigation Arrows */
-        .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px 15px;
-            font-size: 24px;
-            border: none;
-            cursor: pointer;
-            border-radius: 50%;
-            outline: none;
-            transition: background 0.3s;
-        }
+  /* Arrows */
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 0, 0, 0.75);
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.2s;
+  }
 
-        .slider-arrow:hover {
-            background: rgba(255, 0, 0, 0.7);
-        }
+  .slider-arrow:hover {
+    background: #ff1a1a;
+    transform: scale(1.1) translateY(-50%);
+  }
 
-        .left-arrow {
-            left: 10px;
-        }
+  .left-arrow { left: 15px; }
+  .right-arrow { right: 15px; }
 
-        .right-arrow {
-            right: 10px;
-        }
+  /* Content Section */
+  .content {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  }
 
-        /* Content Section */
-        .content {
-            padding: 20px;
-            background-color: white;
-            width: 100%;
-            text-align: center;
-            flex-shrink: 0;
-        }
+  .alert-text {
+    color: #d40000;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
 
-        .content h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+  .content h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
 
-        .content p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
+  .content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+  }
 
-        .contact {
-            font-size: 26px;
-            font-weight: bold;
-            color: red;
-        }
-        .alert-text {
-        color: red;
-        font-weight: bold;
-        text-align: center;
-        font-size: 26px;
-        margin-bottom: 10px;
+  .contact {
+    font-size: 26px;
+    font-weight: bold;
+    color: #cc0000;
+    margin-top: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .slider-container {
+      height: 65vh;
     }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .slider-container {
-                height: 70vh;
-            }
+    .slider-arrow {
+      font-size: 20px;
+      padding: 8px 12px;
+    }
 
-            .slider-arrow {
-                font-size: 20px;
-                padding: 8px 12px;
-            }
+    .image-name {
+      font-size: 20px;
+    }
 
-            .image-name {
-                font-size: 20px;
-            }
+    .content {
+      padding: 20px 15px;
+    }
 
-            .content {
-                padding: 15px;
-            }
+    .content h2,
+    .alert-text {
+      font-size: 22px;
+    }
 
-            .content h2 {
-                font-size: 24px;
-            }
+    .content p {
+      font-size: 16px;
+    }
 
-            .content p {
-                font-size: 16px;
-            }
-
-            .contact {
-                font-size: 22px;
-            }
-        }
-    </style>
+    .contact {
+      font-size: 22px;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -194,32 +200,30 @@
     <section class="slider-container">
     <button class="slider-arrow left-arrow" onclick="prevImage()">&#10094;</button>
     <div class="slider">
-        <img src="https://s.tfrbot.com/h/nXZRKq" alt="Scammer Mas Kilat Khan - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/RBdLOZ" alt="Scammer Liu Dong Hang - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/ZHB2w1" alt="Scammer Gabriel Goh - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/k6FJqB" alt="Scammer Tan Kok Liang - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/fE7qVr" alt="Scammer Nin Hairi - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/lQ6Uno" alt="Scammer Elaine Goh - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/k6FJqB" alt="Scammer Ng Bao Zheng - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/BapQqb" alt="Scammer Ng Bao Zheng - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/zrRlWA" alt="Scammer Nur Babi - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/7frQ2O" alt="Scammer Melvin Ng - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/5l3tT4" alt="Scammer Ezabel Ng - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/Jm5Hoe" alt="Scammer Alvin Ng - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/OXbsdF" alt="Scammer Valerie Tan - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/UNncYh" alt="Scammer Chelsea Zeng - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/tD7mOl" alt="Scammer JW Lim - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/rwF217" alt="Scammer Jason Wee - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/I5w3lU" alt="Scammer Forgot Name But Scammer - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/NHSTdU" alt="Scammer Forgot Name But Scammer - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/Cn1bg5" alt="Scammer Shine Goh - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/LDRjPA" alt="Scammer Chen Yu Xin - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/DcCQ8H" alt="Scammer Stella Koh - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/I5w3lU" alt="Scammer Chan Jiawei - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/gi1zs9" alt="Scammer Karen - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/ihN6gd" alt="Scammer Ng Cher Teck - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/AZBjQp" alt="Scammer Tan Kok Liang - Fraud Alert in Singapore">
-        <img src="https://s.tfrbot.com/h/ICK8sO" alt="Scammer Michelle - Fraud Alert in Singapore">
+        <img src="https://singasavors.github.io/Logo/maskilat-scam.png" alt="Mas Kilat Khan">
+            <img src="https://singasavors.github.io/Logo/jeffrey-scam.png" alt="Liu Dong Hang">
+            <img src="https://singasavors.github.io/Logo/gabriel-scam.png" alt="Gabriel Goh">
+            <img src="https://singasavors.github.io/Logo/tankokliang-scam.png" alt="Tan Kok Liang">
+            <img src="https://singasavors.github.io/Logo/nin-scam.png" alt="Nin Hairi">
+            <img src="https://singasavors.github.io/Logo/elaine-scam.png" alt="Elaine Goh">
+            <img src="https://singasavors.github.io/Logo/alan-scam.png" alt="Ng Bao Zheng">
+            <img src="https://singasavors.github.io/Logo/babi-scam.png" alt="Nur Babi">
+            <img src="https://singasavors.github.io/Logo/melvin-scam.png" alt="Melvin Ng">
+            <img src="https://singasavors.github.io/Logo/ezabel-scam.png" alt="Ezabel Ng">
+            <img src="https://singasavors.github.io/Logo/alvin-scam.png" alt="Alvin Ng">
+            <img src="https://singasavors.github.io/Logo/valeria-scam.png" alt="Valerie Tan">
+            <img src="https://singasavors.github.io/Logo/chelsea-scam.png" alt="Chelsea Zeng">
+            <img src="https://singasavors.github.io/Logo/jwlim-scam.png" alt="JW Lim">
+            <img src="https://singasavors.github.io/Logo/jason-scam.png" alt="Jason Wee">
+            <img src="https://singasavors.github.io/Logo/irwin-scam.png" alt="Irwin Tan">
+            <img src="https://singasavors.github.io/Logo/babi-scam2.png" alt="Forgot Name But Scammer">
+            <img src="https://singasavors.github.io/Logo/shine-scam.png" alt="Shine Goh">
+            <img src="https://singasavors.github.io/Logo/xiaojuan-scam.png" alt="Chen Xiao Juan">
+            <img src="https://singasavors.github.io/Logo/stella-scam.png" alt="Stella Koh">
+            <img src="https://singasavors.github.io/Logo/jiawei-scam.png" alt="Chan Jiawei">
+            <img src="https://singasavors.github.io/Logo/karen-scam.png" alt="Karen">
+            <img src="https://singasavors.github.io/Logo/ngcherteck-scam.png" alt="Ng Cher Teck">
+            <img src="https://singasavors.github.io/Logo/michelle-scam.png" alt="Michelle">
     </div>
     <button class="slider-arrow right-arrow" onclick="nextImage()">&#10095;</button>
 </section>
@@ -232,36 +236,35 @@
 </section>
 
 <script>
-    let currentIndex = 0;
-    const slider = document.querySelector('.slider');
-    const images = document.querySelectorAll('.slider img');
-    const imageName = document.getElementById("image-name");
+  let currentIndex = 0;
+  const slider = document.querySelector('.slider');
+  const images = document.querySelectorAll('.slider img');
+  const imageName = document.getElementById("image-name");
 
-    const imageNames = [
-        "Mas Kilat Khan", "Liu Dong Hang", "Gabriel Goh", "Tan Kok Liang", "Nin Hairi",
-        "Elaine Goh", "Ng Bao Zheng", "Ng Bao Zheng", "Nur Babi", "Melvin Ng",
-        "Ezabel Ng", "Alvin Ng", "Valerie Tan", "Chelsea Zeng", "JW Lim",
-        "Jason Wee", "Forgot Name But Scammer", "Forgot Name But Scammer", "Shine Goh",
-        "Chen Yu Xin", "Stella Koh", "Chan Jiawei", "Karen", "Ng Cher Teck",
-        "Tan Kok Liang", "Michelle"
-    ];
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    imageName.textContent = images[currentIndex].alt;
+  }
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        imageName.textContent = imageNames[currentIndex];
-    }
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateSlider();
+  }
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateSlider();
-    }
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateSlider();
+  }
 
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateSlider();
-    }
+  // Attach to button clicks
+  document.querySelector('.left-arrow').addEventListener('click', prevImage);
+  document.querySelector('.right-arrow').addEventListener('click', nextImage);
 
-    setInterval(nextImage, 3000);
+  // Initialize display
+  updateSlider();
+
+  // Auto-slide every 3 seconds
+  setInterval(nextImage, 3000);
 </script>
 
 </body>
