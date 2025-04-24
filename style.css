@@ -36,6 +36,29 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+/* Navigation */
+.navbar {
+  background-color: #c00;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #a00;
+  border-radius: 5px;
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') center/cover no-repeat;
@@ -191,5 +214,15 @@ footer {
   .quiz-btn {
     width: 100%;
     max-width: 300px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    background-color: #c00;
+    padding: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
   }
 }
