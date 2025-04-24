@@ -1,14 +1,21 @@
-// Quiz Button Click Feedback
+// Smooth Quiz Feedback
 document.querySelectorAll('.quiz-btn').forEach(button => {
   button.addEventListener('click', () => {
-    alert('Nice try! Keep learning to outsmart the scammers.');
+    const messages = [
+      "Correct! Too good to be true, right?",
+      "Scammers are sneaky—stay sharp!",
+      "Partially legit sounding, but trust no one blindly!"
+    ];
+    const random = messages[Math.floor(Math.random() * messages.length)];
+    alert(random);
   });
 });
 
-// Auto Carousel Scroll
+// Auto Scroll for Scam Stories Carousel
 document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.querySelector('.carousel');
   let scrollPosition = 0;
+
   if (carousel) {
     setInterval(() => {
       if (carousel.scrollWidth > carousel.clientWidth) {
@@ -21,9 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 5000);
   }
 
-  // Comment System
+  // Simple Comment System
   const commentForm = document.getElementById('comment-form');
   const commentList = document.getElementById('comment-list');
+
   if (commentForm && commentList) {
     commentForm.addEventListener('submit', e => {
       e.preventDefault();
@@ -31,22 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
       if (input.value.trim()) {
         const li = document.createElement('li');
         li.textContent = input.value.trim();
+        li.style.padding = "8px";
+        li.style.borderBottom = "1px solid #ccc";
         commentList.appendChild(li);
         input.value = '';
       }
     });
   }
 
-  // Accordion FAQ
+  // FAQ Accordion Toggle
   document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
       const panel = header.nextElementSibling;
-      const isActive = header.classList.toggle('active');
-      panel.style.maxHeight = isActive ? panel.scrollHeight + 'px' : null;
+      const isOpen = panel.style.display === 'block';
+      document.querySelectorAll('.accordion-panel').forEach(p => p.style.display = 'none');
+      panel.style.display = isOpen ? 'none' : 'block';
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
 
-  // Smooth Scroll for In-Page Anchor Links
+  // Smooth Scrolling for Anchor Links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));

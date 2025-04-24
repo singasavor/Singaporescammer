@@ -6,17 +6,13 @@ body {
   color: #333;
 }
 
+/* Headings */
 h1, h2, h3, h4 {
   margin: 0 0 10px;
+  font-weight: bold;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 0;
-}
-
+/* Buttons */
 .btn {
   padding: 10px 20px;
   text-decoration: none;
@@ -24,6 +20,7 @@ h1, h2, h3, h4 {
   margin: 5px;
   display: inline-block;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .primary {
@@ -31,9 +28,17 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+.primary:hover {
+  background-color: #a00;
+}
+
 .secondary {
   background-color: #333;
   color: #fff;
+}
+
+.secondary:hover {
+  background-color: #111;
 }
 
 /* Navigation */
@@ -61,20 +66,15 @@ h1, h2, h3, h4 {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(to right, #8B0000, #000);
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
 }
 
-.animated-headline {
+.hero h1 {
   font-size: 2.5em;
-  animation: fadeIn 3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  text-shadow: 2px 2px #000;
 }
 
 /* Carousel Section */
@@ -101,7 +101,7 @@ h1, h2, h3, h4 {
   flex-shrink: 0;
 }
 
-/* News Ticker */
+/* Scam Radar Ticker */
 .news-ticker {
   background: #c00;
   color: #fff;
@@ -165,6 +165,29 @@ h1, h2, h3, h4 {
   background-color: #c00;
 }
 
+/* Accordion FAQ */
+.accordion-header {
+  background-color: #c00;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.accordion-panel {
+  display: none;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Comment Section */
+#comment-form input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 /* Hall of Fame and Wall of Shame */
 .honors {
   display: flex;
@@ -183,8 +206,19 @@ h1, h2, h3, h4 {
   box-shadow: 0 1px 6px rgba(0,0,0,0.05);
 }
 
+.hall-of-fame ul, .wall-of-shame ul {
+  list-style: none;
+  padding: 0;
+}
+
 .wall-of-shame .blurred {
   filter: blur(4px);
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.wall-of-shame .blurred:hover {
+  filter: none;
 }
 
 /* Footer */
