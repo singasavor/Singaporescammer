@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Custom Domain Homepage -->
+  <url>
+    <loc>https://www.singaporescammers.com/</loc>
+    <lastmod>2025-04-24</lastmod>
+  </url>
+
+  <!-- Custom Domain Pages -->
+  <url>
+    <loc>https://www.singaporescammers.com/53444733C.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/activist.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/alan-ng-bao-zheng.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/bigolive.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/contact-us.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/unfair-deal.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/dataleak.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/discussion.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/vipinvoice.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/vipsubscribe.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/topscammer.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/terms-of-service.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/vivian-activist.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/maxim88-scam-alert.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/scamalert.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/report-scam.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/scamdetails.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/directory.html</loc>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.singaporescammers.com/propnex.html</loc>
+    <lastmod>2025-04-22</lastmod>
+  </url>
+
+  <!-- Original GitHub Pages URLs -->
   <url>
     <loc>https://singasavors.github.io/Singaporescammer/</loc>
     <lastmod>2025-04-17</lastmod>
@@ -80,4 +166,5 @@
     <loc>https://singasavors.github.io/Singaporescammer/propnex.html</loc>
     <lastmod>2025-04-22</lastmod>
   </url>
+
 </urlset>
