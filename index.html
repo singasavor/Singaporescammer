@@ -5,12 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Singapore Authentic Scam Review</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin-top: 70px;
+      background: #fff;
+    }
+    .hero {
+      background: linear-gradient(to right, #8B0000, #000);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      text-shadow: 2px 2px #000;
+    }
+    .cta-buttons .btn {
+      margin: 10px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+    }
+    .primary { background: #dc3545; color: white; }
+    .secondary { background: #343a40; color: white; }
+
+    .carousel-section, .quiz, .community, .honors {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+    }
+    .carousel-item {
+      flex: 0 0 auto;
+      background: #f8f9fa;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      min-width: 250px;
+    }
+
+    .ticker {
+      white-space: nowrap;
+      overflow: hidden;
+      animation: scroll 20s linear infinite;
+    }
+    .ticker p {
+      display: inline-block;
+      padding: 0 2em;
+      color: red;
+      font-weight: bold;
+    }
+    @keyframes scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .forum-preview .post {
+      background: #f1f1f1;
+      margin: 10px auto;
+      padding: 15px;
+      border-left: 5px solid #dc3545;
+      max-width: 600px;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .quiz-btn {
+      width: 300px;
+      padding: 10px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .accordion-header {
+      cursor: pointer;
+      background: #dc3545;
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .accordion-panel {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .hall-of-fame ul, .wall-of-shame ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .hall-of-fame li, .wall-of-shame li {
+      background: #f8f9fa;
+      padding: 10px;
+      margin: 10px auto;
+      max-width: 500px;
+    }
+    .blurred {
+      filter: blur(2px);
+      cursor: pointer;
+    }
+    .blurred:hover {
+      filter: none;
+    }
+
+    footer {
+      background: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
 
-<!-- PropNex-Style Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="https://t.me/singaporescammer">
@@ -21,18 +140,17 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="https://www.singaporescammers.com/topscammer.html" target="_blank">Top Scammer</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://www.singaporescammers.com/discussion.html" target="_blank">Discussion Forum</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://www.singaporescammers.com/vipsubscribe.html" target="_blank">VIP SUBSCRIBE</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://t.me/+GzgnOYLdMKZmMTA1" target="_blank">Telegram Channel</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://www.singaporescammers.com/contact-us.html" target="_blank">Contact Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://www.singaporescammers.com/report-scam.html" target="_blank">Report Scam</a></li>
+        <li class="nav-item"><a class="nav-link" href="/topscammer.html" target="_blank">Top Scammer</a></li>
+        <li class="nav-item"><a class="nav-link" href="/discussion.html" target="_blank">Discussion Forum</a></li>
+        <li class="nav-item"><a class="nav-link" href="/vipsubscribe.html" target="_blank">VIP SUBSCRIBE</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://t.me/+GzgnOYLdMKZmMTA1" target="_blank">Telegram</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact-us.html" target="_blank">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/report-scam.html" target="_blank">Report Scam</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Main Content (unchanged sections) -->
 <section class="hero">
   <h1>Discover the Truth. Share Your Story. Outsmart the Scam.</h1>
   <div class="cta-buttons">
@@ -71,36 +189,27 @@
 <section class="community">
   <h2>Community Buzz</h2>
   <div class="forum-preview">
-    <div class="post">
-      <h4>Is this SMS from CPF legit?</h4>
-      <p>Received a message about account verification...</p>
-    </div>
-    <div class="post">
-      <h4>Beware of fake Shopee vouchers!</h4>
-      <p>Got a link offering $50 off, but it seems suspicious...</p>
-    </div>
-    <div class="post">
-      <h4>New scam call pretending to be from ICA</h4>
-      <p>Caller asked for personal details claiming immigration issues...</p>
-    </div>
+    <div class="post"><h4>Is this SMS from CPF legit?</h4><p>Received a message about account verification...</p></div>
+    <div class="post"><h4>Beware of fake Shopee vouchers!</h4><p>Got a link offering $50 off, but it seems suspicious...</p></div>
+    <div class="post"><h4>New scam call pretending to be from ICA</h4><p>Caller asked for personal details claiming immigration issues...</p></div>
   </div>
 </section>
 
 <section class="quiz">
   <h2>🎯 Can You Spot the Scam?</h2>
   <div class="quiz-options">
-    <button class="quiz-btn">Option A: Free iPhone Giveaway</button>
-    <button class="quiz-btn">Option B: Bank Alert: Unusual Activity</button>
-    <button class="quiz-btn">Option C: Confirm Your Delivery Address</button>
+    <button class="quiz-btn" onclick="alert('Correct! Too good to be true.')">Option A: Free iPhone Giveaway</button>
+    <button class="quiz-btn" onclick="alert('Partially true, always verify with your bank.')">Option B: Bank Alert</button>
+    <button class="quiz-btn" onclick="alert('Legit-looking, but be cautious with links.')">Option C: Confirm Address</button>
   </div>
 </section>
 
 <section>
   <h2 style="text-align:center;">FAQs</h2>
   <div class="accordion" style="max-width: 800px; margin:auto;">
-    <div class="accordion-header">What is a scam?</div>
+    <div class="accordion-header" onclick="togglePanel(this)">What is a scam?</div>
     <div class="accordion-panel">A scam is a fraudulent scheme used to cheat people.</div>
-    <div class="accordion-header">How do I report a scam?</div>
+    <div class="accordion-header" onclick="togglePanel(this)">How do I report a scam?</div>
     <div class="accordion-panel">Click “Submit a Scam Story” above and fill the form.</div>
   </div>
 </section>
@@ -127,18 +236,36 @@
   <div class="wall-of-shame">
     <h2>🚫 Wall of Shame</h2>
     <ul>
-      <li><span class="blurred">Alan Ng Bao Zheng</span> – Impersonated bank officer</li>
-      <li><span class="blurred">Tan Kok Liang</span> – Ran fake charity drive</li>
-      <li><span class="blurred">Ng Cher Teck</span> – Phishing email campaigns</li>
+      <li><span class="blurred" title="Reported scammer. Details under review.">Alan Ng Bao Zheng</span></li>
+      <li><span class="blurred" title="Reported scammer. Details under review.">Tan Kok Liang</span></li>
+      <li><span class="blurred" title="Reported scammer. Details under review.">Ng Cher Teck</span></li>
     </ul>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 <a href="https://singaporescammers.com" style="color:#fff;">SingaporeScammers.com</a> – All rights reserved.</p>
+  <p>&copy; 2025 <a href="https://www.singaporescammers.com" style="color:#fff;">SingaporeScammers.com</a> – All rights reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
+<script>
+  function togglePanel(header) {
+    const panel = header.nextElementSibling;
+    const allPanels = document.querySelectorAll('.accordion-panel');
+    allPanels.forEach(p => { if (p !== panel) p.style.display = 'none'; });
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+  }
+
+  document.getElementById('comment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = this.querySelector('input');
+    if (input.value.trim()) {
+      const li = document.createElement('li');
+      li.textContent = input.value;
+      document.getElementById('comment-list').appendChild(li);
+      input.value = '';
+    }
+  });
+</script>
 </body>
 </html>
