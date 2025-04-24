@@ -1,62 +1,195 @@
-/* Main styles for the Subscription Container */
-body, html {
-  height: 100%;
+/* Base Styles */
+body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
 }
 
-.subscription-container {
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://s.tfrbot.com/h/2LZwiE');
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
+h1, h2, h3, h4 {
+  margin: 0 0 10px;
 }
 
-header img {
-  width: 100%;
-  height: auto;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
 }
 
-h1 {
-  text-align: center;
-  font-size: 24px;
-  padding-top: 20px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 15px;
-  font-size: 16px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-}
-
-/* Terms section styling */
-.terms {
-  background: rgba(255, 255, 255, 0.1);
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-footer {
-  margin-top: 20px;
-  text-align: center;
-}
-
-stripe-buy-button {
-  background-color: #ff0000; /* Red color for visibility, change as needed */
-  color: white;
-  border: none;
+.btn {
   padding: 10px 20px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
+  text-decoration: none;
   border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.primary {
+  background-color: #c00;
+  color: #fff;
+}
+
+.secondary {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.animated-headline {
+  font-size: 2.5em;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Carousel Section */
+.carousel-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  background: #fff;
+  border: 2px solid #c00;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 250px;
+  flex-shrink: 0;
+}
+
+/* News Ticker */
+.news-ticker {
+  background: #c00;
+  color: #fff;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.ticker {
+  white-space: nowrap;
+  display: flex;
+  gap: 50px;
+  animation: tickerMove 20s linear infinite;
+}
+
+@keyframes tickerMove {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Community Section */
+.community {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.forum-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.post {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-left: 5px solid #c00;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* Quiz Section */
+.quiz {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.quiz-btn {
+  background-color: #333;
+  color: #fff;
+  margin: 10px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quiz-btn:hover {
+  background-color: #c00;
+}
+
+/* Hall of Fame and Wall of Shame */
+.honors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.hall-of-fame, .wall-of-shame {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.wall-of-shame .blurred {
+  filter: blur(4px);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .honors {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hall-of-fame, .wall-of-shame {
+    width: 90%;
+  }
+
+  .quiz-btn {
+    width: 100%;
+    max-width: 300px;
+  }
 }
