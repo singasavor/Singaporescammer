@@ -85,6 +85,12 @@
     <lastmod>2025-04-22</lastmod>
   </url>
 
+  <!-- New Custom Domain Page -->
+  <url>
+    <loc>https://www.singaporescammers.com/scam-grc.html</loc>
+    <lastmod>2025-04-26</lastmod>
+  </url>
+
   <!-- Original GitHub Pages URLs -->
   <url>
     <loc>https://singasavors.github.io/Singaporescammer/</loc>
@@ -165,6 +171,12 @@
   <url>
     <loc>https://singasavors.github.io/Singaporescammer/propnex.html</loc>
     <lastmod>2025-04-22</lastmod>
+  </url>
+
+  <!-- New GitHub Pages URL -->
+  <url>
+    <loc>https://singasavors.github.io/Singaporescammer/scam-grc.html</loc>
+    <lastmod>2025-04-26</lastmod>
   </url>
 
 </urlset>
