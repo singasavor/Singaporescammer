@@ -1,9 +1,9 @@
-// Smooth Quiz Feedback + Fun Effects
+// Smooth Quiz Feedback + Confetti Burst
 document.querySelectorAll('.quiz-btn').forEach(button => {
   button.addEventListener('click', () => {
     const messages = [
       "Correct! Too good to be true, right?",
-      "Scammers are sneaky—stay sharp!",
+      "Scammers are sneaky � stay sharp!",
       "Partially legit sounding, but trust no one blindly!",
       "Great job! Always verify before you trust.",
       "Stay sharp! Scams can look real."
@@ -11,16 +11,19 @@ document.querySelectorAll('.quiz-btn').forEach(button => {
     const random = messages[Math.floor(Math.random() * messages.length)];
     alert(random);
 
-    // Little fun confetti effect
-    const confetti = document.createElement('div');
-    confetti.textContent = "🎉";
-    confetti.style.position = 'fixed';
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.top = '-20px';
-    confetti.style.fontSize = '2rem';
-    confetti.style.animation = 'fall 3s linear forwards';
-    document.body.appendChild(confetti);
-    setTimeout(() => confetti.remove(), 3000);
+    // Confetti Burst Effect
+    for (let i = 0; i < 10; i++) { // 10 confettis
+      const confetti = document.createElement('div');
+      confetti.textContent = "";
+      confetti.style.position = 'fixed';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.top = '-20px';
+      confetti.style.fontSize = (Math.random() * 1.5 + 1) + 'rem'; // random size
+      confetti.style.animation = 'fall 3s linear forwards';
+      confetti.style.zIndex = 9999;
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 3000);
+    }
   });
 });
 
@@ -54,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         li.textContent = input.value.trim();
         li.style.padding = "8px";
         li.style.borderBottom = "1px solid #ccc";
-        li.style.animation = "fadeIn 1s ease";
+        li.style.animation = "fadeIn 1s ease forwards";
         commentList.appendChild(li);
         input.value = '';
       }
@@ -78,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Smooth Scrolling for Anchor Links
+  // Smooth Anchor Scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
@@ -90,12 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// CSS Animations (Add dynamically via JS)
+// Dynamic CSS Animations
 const style = document.createElement('style');
 style.innerHTML = `
 @keyframes fall {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
 
 @keyframes fadeIn {

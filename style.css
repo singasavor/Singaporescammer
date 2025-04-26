@@ -1,305 +1,302 @@
-/* Base Styles */
+<style>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
-
 body {
-  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
+  background-color: #fdfdfd;
   color: #111;
 }
 
 /* Headings */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   margin: 0 0 10px;
   font-weight: bold;
   color: #111;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: linear-gradient(90deg, #dc3545, #b00000);
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.navbar-brand img {
+  height: 40px;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  background-color: #a00000 !important;
+  border-radius: 6px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(-45deg, #8B0000, #b22222, #000);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.hero h1 {
+  font-size: 2.8em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 /* Buttons */
 .btn {
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
-  margin: 5px;
+  border-radius: 8px;
+  margin: 8px;
   display: inline-block;
   font-weight: bold;
   transition: all 0.3s ease;
 }
-
 .btn.primary {
   background-color: #dc3545;
   color: #fff;
 }
 .btn.primary:hover {
-  background-color: #a00;
+  background-color: #b00000;
+  transform: scale(1.05);
 }
-
 .btn.secondary {
   background-color: #343a40;
   color: #fff;
 }
 .btn.secondary:hover {
   background-color: #111;
-}
-
-.btn:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* Navigation */
-.navbar {
-  background-color: #dc3545 !important;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand img {
-  height: 40px;
-}
-
-.navbar-nav .nav-link {
-  color: #fff !important;
-  font-weight: bold;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  background-color: #b00000 !important;
-  border-radius: 5px;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(to right, #8B0000, #000);
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  text-shadow: 2px 2px #000;
+  transform: scale(1.05);
 }
 
 /* Carousel Section */
 .carousel-section {
   background-color: #f9f9f9;
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
-
 .carousel {
   display: flex;
   overflow-x: auto;
   gap: 20px;
-  padding: 20px 0;
+  padding: 20px;
   scroll-behavior: smooth;
 }
-
 .carousel-item {
   background: #fff;
   border: 2px solid #dc3545;
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
   min-width: 250px;
   flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.carousel-item:hover {
+  transform: scale(1.05);
 }
 
-/* Scam Radar Ticker */
+/* Scam Radar */
 .news-ticker {
-  background: #dc3545 !important;
+  background: #dc3545;
   color: #fff;
   padding: 20px;
   overflow: hidden;
 }
-
 .ticker {
-  white-space: nowrap;
   display: flex;
-  gap: 50px;
+  white-space: nowrap;
+  gap: 60px;
   animation: tickerMove 30s linear infinite;
 }
-
 @keyframes tickerMove {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.ticker p {
+  font-weight: bold;
+  animation: pulseText 2s infinite alternate;
+}
+@keyframes pulseText {
+  0% { opacity: 1; }
+  100% { opacity: 0.7; }
 }
 
 /* Community Section */
 .community {
-  background-color: #fff;
+  background: #fff;
   padding: 60px 20px;
   text-align: center;
 }
-
 .forum-preview {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
 }
-
 .post {
-  background-color: #ffffff;
-  padding: 18px;
+  background: #fff;
+  padding: 20px;
   border-left: 5px solid #dc3545;
-  border-radius: 6px;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s ease;
-}
-
-.post:hover {
-  background-color: #f1f1f1;
-}
-
-.post h4 a {
-  color: #0056b3;
-  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
-
+.post:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.02);
+}
+.post h4 a {
+  color: #007bff;
+  text-decoration: none;
+}
 .post h4 a:hover {
-  color: #c00;
-  text-decoration: underline;
+  color: #dc3545;
 }
 
 /* Quiz Section */
 .quiz {
-  background-color: #f9f9f9;
+  background: #f8f9fa;
   padding: 60px 20px;
   text-align: center;
 }
-
 .quiz-btn {
-  background-color: #111;
-  color: #fff;
-  margin: 10px;
-  padding: 15px 25px;
+  background: #343a40;
+  color: white;
   border: 1px solid #dc3545;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 8px;
   transition: background 0.3s ease;
 }
-
 .quiz-btn:hover {
-  background-color: #dc3545;
-  color: #fff;
+  background: #dc3545;
 }
 
-/* Accordion FAQ */
+/* FAQ Accordion */
 .accordion-header {
-  background-color: #c00;
-  color: #fff;
-  padding: 10px;
+  background: #c00;
+  color: white;
+  padding: 12px;
   cursor: pointer;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.accordion-panel {
-  display: none;
-  padding: 10px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-/* Comment Section */
-#comment-form input {
-  border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 10px 0;
+}
+.accordion-panel {
+  background: #f9f9f9;
+  display: none;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Comments */
+.comments {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+#comment-form input {
   padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   width: 70%;
   max-width: 400px;
 }
+#comment-form button {
+  margin-top: 10px;
+}
 
-/* Hall of Fame and Wall of Shame */
+/* Hall of Fame / Wall of Shame */
 .honors {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background: #f9f9f9;
   padding: 60px 20px;
-  background-color: #fff;
 }
-
 .hall-of-fame, .wall-of-shame {
   width: 45%;
   padding: 20px;
-  background-color: #fff;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-
 .hall-of-fame ul, .wall-of-shame ul {
   list-style: none;
   padding: 0;
 }
-
 .wall-of-shame .blurred {
   filter: blur(4px);
   cursor: pointer;
-  transition: filter 0.2s ease;
+  transition: filter 0.3s;
 }
-
 .wall-of-shame .blurred:hover {
   filter: none;
 }
 
-/* Footer & Disclaimer */
-footer, .disclaimer {
+/* Disclaimer + Footer */
+.disclaimer, footer {
   background: #111;
   color: #bbb;
-  font-size: 0.9em;
   text-align: center;
+  font-size: 0.9em;
   padding: 20px;
 }
-
 footer a, .disclaimer a {
   color: #bbb;
-  text-decoration: none;
 }
-
 footer a:hover, .disclaimer a:hover {
   color: #fff;
 }
 
-/* Responsive Styles */
+/* Animations */
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Tweaks */
 @media (max-width: 768px) {
   .carousel {
     flex-direction: column;
     align-items: center;
   }
-
   .carousel-item {
     min-width: 90%;
   }
-
   .honors {
     flex-direction: column;
     align-items: center;
   }
-
   .hall-of-fame, .wall-of-shame {
     width: 90%;
-  }
-
-  .quiz-btn {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    background-color: #dc3545 !important;
-    padding: 10px;
-  }
-
-  .navbar-nav .nav-item {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
+</style>
