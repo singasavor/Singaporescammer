@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://www.singaporescammers.com/discussion.html</loc>
-    <lastmod>2025-04-26</lastmod> <!-- Updated to today -->
+    <lastmod>2025-04-26</lastmod>
   </url>
   <url>
     <loc>https://www.singaporescammers.com/vipinvoice.html</loc>
@@ -88,6 +88,10 @@
     <loc>https://www.singaporescammers.com/scam-grc.html</loc>
     <lastmod>2025-04-26</lastmod>
   </url>
+  <url>
+    <loc>https://www.singaporescammers.com/election-scam.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
 
   <!-- Original GitHub Pages URLs -->
   <url>
@@ -124,7 +128,7 @@
   </url>
   <url>
     <loc>https://singasavors.github.io/Singaporescammer/discussion.html</loc>
-    <lastmod>2025-04-26</lastmod> <!-- Updated to today -->
+    <lastmod>2025-04-26</lastmod>
   </url>
   <url>
     <loc>https://singasavors.github.io/Singaporescammer/vipinvoice.html</loc>
@@ -173,6 +177,10 @@
   <url>
     <loc>https://singasavors.github.io/Singaporescammer/scam-grc.html</loc>
     <lastmod>2025-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://singasavors.github.io/Singaporescammer/election-scam.html</loc>
+    <lastmod>2025-04-30</lastmod>
   </url>
 
 </urlset>
