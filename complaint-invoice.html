@@ -162,28 +162,27 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const params = new URLSearchParams(window.location.search);
-  const aliasName = params.get("aliasName") || "Not provided";
-  const telegramUsername = params.get("telegramUsername") || "Not provided";
+
+  const fullName = params.get("name") || "Not provided";
   const email = params.get("email") || "Not provided";
-  const businessType = params.get("businessType") || "Not provided";
-  const plan = params.get("plan") || "Not provided";
-  const price = params.get("price") || "0.00";
+  const dob = params.get("dob") || "Not provided";
+  const phone = params.get("phone") || "Not provided";
 
-  document.getElementById("aliasName").textContent = aliasName;
-  document.getElementById("telegramUsername").textContent = telegramUsername;
-  document.getElementById("email").textContent = email;
-  document.getElementById("businessType").textContent = businessType;
-  document.getElementById("plan").textContent = plan;
-  document.getElementById("totalPrice").textContent = price;
+  // Update the table display
+  document.getElementById("displayName").textContent = fullName;
+  document.getElementById("emailDisplay").textContent = email;
+  document.getElementById("displayDob").textContent = dob;
+  document.getElementById("displayPhone").textContent = phone;
 
-  document.getElementById("inputAliasName").value = aliasName;
-  document.getElementById("inputTelegramUsername").value = telegramUsername;
-  document.getElementById("inputEmail").value = email;
-  document.getElementById("inputBusinessType").value = businessType;
-  document.getElementById("inputPlan").value = plan;
-  document.getElementById("inputPrice").value = price;
+  // Optional: If you want to submit these as hidden inputs, uncomment below
+  // document.querySelector('form').insertAdjacentHTML('beforeend', `
+  //   <input type="hidden" name="Full Name" value="${fullName}">
+  //   <input type="hidden" name="Email" value="${email}">
+  //   <input type="hidden" name="Date of Birth" value="${dob}">
+  //   <input type="hidden" name="Phone" value="${phone}">
+  // `);
 });
 </script>
 

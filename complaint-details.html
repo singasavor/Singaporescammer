@@ -152,17 +152,17 @@
         <form id="cspForm">
             <h2>Personal Information</h2>
 
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" required>
+<label for="dob">Date of Birth</label>
+<input type="date" id="dob" name="dob" required>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" placeholder="example@domain.com" required>
 
-            <label for="phone">Phone Number (+65)</label>
-            <input type="tel" id="phone" name="phone" placeholder="e.g. 81234567" required>
+<label for="phone">Phone Number (+65)</label>
+<input type="tel" id="phone" name="phone" placeholder="e.g. 81234567" required>
 
             <h2>Interview Questions</h2>
 
@@ -226,10 +226,17 @@
     </div>
 </div>
 <script>
-    document.getElementById("cspForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        window.location.href = "https://www.singaporescammers.com/vipinvoice.html";
-    });
+document.getElementById("cspForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = encodeURIComponent(document.getElementById("name").value);
+  const dob = encodeURIComponent(document.getElementById("dob").value);
+  const email = encodeURIComponent(document.getElementById("email").value);
+  const phone = encodeURIComponent(document.getElementById("phone").value);
+
+  const target = `https://www.singaporescammers.com/complaint-invoice.html?name=${name}&dob=${dob}&email=${email}&phone=${phone}`;
+  window.location.href = target;
+});
 </script>
 </body>
 </html>
