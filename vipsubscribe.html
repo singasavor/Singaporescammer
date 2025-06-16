@@ -1,176 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIP Membership Subscription</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIP Membership Subscription</title>
+  <meta name="description" content="Join VIP Membership for exclusive posting privileges, custom content, and increased business visibility.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-    /* Reset Styles */
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    /* Fullscreen Layout */
     body, html {
-        background: #000;
-        color: #fff;
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
+      background: #000;
+      color: #fff;
+      width: 100%;
+      min-height: 100vh;
+      padding: 20px 0;
     }
 
-    /* Subscription Container */
     .subscription-container {
-        width: 90%;
-        max-width: 900px;
-        background: rgba(20, 20, 20, 0.95);
-        padding: 40px;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-        border: 2px solid rgba(255, 0, 0, 0.8);
+      width: 90%;
+      max-width: 900px;
+      background: rgba(20, 20, 20, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+      border: 2px solid rgba(255, 0, 0, 0.8);
+      margin: 0 auto;
     }
 
     header img {
-        width: 100%;
-        max-width: 200px;
-        margin-bottom: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
     }
 
     h1 {
-        font-size: 28px;
-        color: #ff0000;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-        margin-bottom: 15px;
-        text-transform: uppercase;
+      font-size: 28px;
+      color: #ff0000;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+      margin-bottom: 15px;
+      text-transform: uppercase;
     }
 
     ul {
-        list-style: none;
-        text-align: left;
-        margin: 20px 0;
-        padding: 0;
-        font-size: 18px;
+      list-style: none;
+      text-align: left;
+      margin: 20px 0;
+      padding: 0;
+      font-size: 18px;
     }
 
     ul li {
-        margin-bottom: 12px;
-        padding-left: 30px;
-        position: relative;
+      margin-bottom: 12px;
+      padding-left: 30px;
+      position: relative;
     }
 
     ul li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #00ff00;
-        font-size: 22px;
-        text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00ff00;
+      font-size: 22px;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
     }
 
     .terms {
-        margin-top: 20px;
-        padding: 20px;
-        background: rgba(30, 30, 30, 0.9);
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
     }
 
     .terms h2 {
-        font-size: 22px;
-        color: #ff0000;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-        margin-bottom: 10px;
+      font-size: 22px;
+      color: #ff0000;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+      margin-bottom: 10px;
     }
 
     .terms p {
-        font-size: 16px;
-        color: #bbb;
-        line-height: 1.6;
+      font-size: 16px;
+      color: #bbb;
+      line-height: 1.6;
     }
 
     footer {
-        margin-top: 20px;
+      margin-top: 20px;
     }
 
-    /* Submit Button */
     .submit-btn {
-        width: 100%;
-        padding: 14px;
-        font-size: 16px;
-        background-color: #ff0000;
-        color: #ffffff;
-        font-weight: bold;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: #ff0000;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      margin-top: 20px;
     }
 
     .submit-btn:hover {
-        background-color: #ff4444;
-        transform: scale(1.08);
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 1024px) {
-        .subscription-container {
-            width: 95%;
-            padding: 30px;
-        }
+      background-color: #ff4444;
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
     }
 
     @media (max-width: 768px) {
-        .subscription-container {
-            width: 95%;
-            padding: 25px;
-        }
+      .subscription-container {
+        width: 95%;
+        padding: 25px;
+      }
 
-        ul {
-            font-size: 16px;
-        }
+      ul {
+        font-size: 16px;
+      }
 
-        .terms p {
-            font-size: 14px;
-        }
+      .terms p {
+        font-size: 14px;
+      }
     }
 
     @media (max-width: 480px) {
-        .subscription-container {
-            width: 98%;
-            padding: 20px;
-        }
+      .subscription-container {
+        width: 98%;
+        padding: 20px;
+      }
 
-        h1 {
-            font-size: 24px;
-        }
+      h1 {
+        font-size: 24px;
+      }
 
-        ul {
-            font-size: 15px;
-        }
+      ul {
+        font-size: 15px;
+      }
 
-        .terms h2 {
-            font-size: 18px;
-        }
+      .terms h2 {
+        font-size: 18px;
+      }
 
-        .terms p {
-            font-size: 13px;
-        }
+      .terms p {
+        font-size: 13px;
+      }
     }
-</style>
+  </style>
 
 </head>
 <body>
@@ -206,7 +193,7 @@
 
 <script>
     document.getElementById("redirectButton").addEventListener("click", function() {
-        window.location.href = "https://singasavors.github.io/Singaporescammer/scamdetails.html";
+        window.location.href = "https://singasavor.github.io/Singaporescammer/scamdetails.html";
     });
 </script>
 
